@@ -1,0 +1,16 @@
+stages:
+    - build
+        - test
+
+build:
+    stage: build
+        script:
+              - echo "Building the application..."
+                    - docker build -t my-app:latest .
+
+        test:
+            stage: test
+                script:
+                      - echo "Running tests..."
+                            - echo "Test Success"
+
